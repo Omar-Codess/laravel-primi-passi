@@ -9,7 +9,13 @@
 </head>
 
 <body>
-    <h1>hello world</h1>
+    <h1>{{ $pageTitle }}</h1>
+    <p>{{ $description }}</p>
+    <ul>
+        @foreach ($menu as $item)
+            <li>{{ $item }}</li>
+        @endforeach
+    </ul>
 </body>
 
 </html>

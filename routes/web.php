@@ -14,5 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
-});
+    $data = [
+        "pageTitle" => "La mia prima pagina con Laravel",
+        "description" => "lorem ipsum dolor",
+        "menu" => [
+            "Info",
+            "About us",
+            "Learn more"
+        ],
+    ];
+    return view('home', $data);
+})->name("home");
